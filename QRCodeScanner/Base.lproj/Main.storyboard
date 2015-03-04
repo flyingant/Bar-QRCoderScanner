@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i2n-ym-nbq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Vkp-9y-itt">
+            <objects>
+                <navigationController id="i2n-ym-nbq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hs2-G1-wdM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fcX-Bz-Lpv" kind="relationship" relationship="rootViewController" id="LJZ-cM-azf"/>
+                        <segue destination="2SH-BB-xyT" kind="push" id="Mzf-wL-7y0"/>
+                        <segue destination="SCe-Tt-hxQ" kind="push" id="jmg-Zb-aBi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvK-dp-zyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="28"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qnn-kl-FuK">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fcX-Bz-Lpv" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eeg-Mn-ff9"/>
+                        <viewControllerLayoutGuide type="bottom" id="T5d-Qx-nuu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BdD-1k-mKm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yx-59-Oz5">
+                                <rect key="frame" x="100" y="192" width="125" height="30"/>
+                                <state key="normal" title="QR Code Scanner">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qrCodeScanner:" destination="fcX-Bz-Lpv" eventType="touchUpInside" id="sj4-yt-bRm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-Nk-DEA">
+                                <rect key="frame" x="97" y="370" width="127" height="30"/>
+                                <state key="normal" title="Bar Code Scanner">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barCodeScanner:" destination="fcX-Bz-Lpv" eventType="touchUpInside" id="ATi-bB-hw8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bzK-Nk-DEA" secondAttribute="centerX" id="GNG-lO-9Xb"/>
+                            <constraint firstItem="bzK-Nk-DEA" firstAttribute="top" secondItem="5Yx-59-Oz5" secondAttribute="bottom" constant="148" id="MpF-YF-Smd"/>
+                            <constraint firstAttribute="centerX" secondItem="5Yx-59-Oz5" secondAttribute="centerX" id="SyQ-zJ-y5u"/>
+                            <constraint firstItem="5Yx-59-Oz5" firstAttribute="top" secondItem="eeg-Mn-ff9" secondAttribute="bottom" constant="131" id="jmk-PB-fkL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kFT-nh-ocB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8M-Nf-h8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="-244"/>
+        </scene>
+        <!--Code Scan View Controller-->
+        <scene sceneID="gpR-lx-raI">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2SH-BB-xyT" customClass="QRCodeScanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tFr-I1-7FF"/>
+                        <viewControllerLayoutGuide type="bottom" id="mi4-La-Ues"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBi-F2-Ape">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBq-sr-jgX">
+                                <rect key="frame" x="35" y="81" width="250" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scanning result" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kx5-mP-7rr">
+                                <rect key="frame" x="35" y="419" width="250" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-LT-MK9">
+                                <rect key="frame" x="137" y="478" width="46" height="30"/>
+                                <state key="normal" title="Toggle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopReading:" destination="2SH-BB-xyT" eventType="touchUpInside" id="5ZW-eK-mKH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VBq-sr-jgX" firstAttribute="top" secondItem="tFr-I1-7FF" secondAttribute="bottom" constant="17" id="793-4p-rd7"/>
+                            <constraint firstItem="ADv-LT-MK9" firstAttribute="top" secondItem="kx5-mP-7rr" secondAttribute="bottom" constant="33" id="7jR-U1-vhS"/>
+                            <constraint firstAttribute="centerX" secondItem="ADv-LT-MK9" secondAttribute="centerX" id="lcm-I5-1aN"/>
+                            <constraint firstAttribute="centerX" secondItem="VBq-sr-jgX" secondAttribute="centerX" id="rvT-ye-Sx8"/>
+                            <constraint firstAttribute="centerX" secondItem="kx5-mP-7rr" secondAttribute="centerX" id="w04-zP-Jur"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DKT-i7-iCP"/>
+                    <connections>
+                        <outlet property="scanResultsField" destination="kx5-mP-7rr" id="WY6-1a-io8"/>
+                        <outlet property="scannerPreview" destination="VBq-sr-jgX" id="0AW-F4-geD"/>
+                        <outlet property="toggleScanning" destination="ADv-LT-MK9" id="8oQ-su-UCN"/>
+                        <outlet property="view" destination="ZBi-F2-Ape" id="USW-wA-ayJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="StU-2h-OBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="468"/>
+        </scene>
+        <!--Bar Code Scan View Controller-->
+        <scene sceneID="6L4-9M-OZZ">
+            <objects>
+                <viewController storyboardIdentifier="BarCodeScanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SCe-Tt-hxQ" customClass="BarCodeScanViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jka-ms-HGs"/>
+                        <viewControllerLayoutGuide type="bottom" id="oKe-Ci-kNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Sk-GB-DeS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAO-pz-VYe">
+                                <rect key="frame" x="35" y="72" width="250" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scanning result" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTK-Xw-OrB">
+                                <rect key="frame" x="35" y="402" width="250" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-b4-tG8">
+                                <rect key="frame" x="137" y="470" width="46" height="30"/>
+                                <state key="normal" title="Toggle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopReading:" destination="SCe-Tt-hxQ" eventType="touchUpInside" id="Nex-jb-a6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UTK-Xw-OrB" secondAttribute="centerX" id="Ab8-8H-Mby"/>
+                            <constraint firstItem="DVY-b4-tG8" firstAttribute="top" secondItem="UTK-Xw-OrB" secondAttribute="bottom" constant="33" id="NcI-eD-I6N"/>
+                            <constraint firstAttribute="centerX" secondItem="DVY-b4-tG8" secondAttribute="centerX" id="Ua9-G4-T5w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x3J-cq-xE3"/>
+                    <connections>
+                        <outlet property="scanResultsField" destination="UTK-Xw-OrB" id="hJr-y4-Bet"/>
+                        <outlet property="scannerPreview" destination="zAO-pz-VYe" id="hSG-Uq-tMO"/>
+                        <outlet property="view" destination="7Sk-GB-DeS" id="nRI-vi-XTU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRH-Zb-Rxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="204"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
